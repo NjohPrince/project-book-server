@@ -30,15 +30,15 @@ app.set("view engine", "ejs");
 // projects routes
 app.use("/api/v1/projects", projectRoutes);
 
+app.get("/api/greetings", (req, res) => {
+  res.json({ message: "Hello World!" }).status(200);
+});
+
 app.use("/api", (req, res) => {
   res.setHeader("Last-Modified", new Date().toUTCString());
   res.sendStatusCode = 200;
 
   res.end("Project Book API Service.");
-});
-
-app.get("/api/greetings", (req, res) => {
-  res.json({ message: "Hello World!" }).status(200);
 });
 
 const PORT = process.env.PORT || 8000;
