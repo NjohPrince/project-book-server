@@ -1,6 +1,6 @@
 const db = require("../models");
 
-const Image = db.images;
+const Invite = db.invite;
 
 const createInvite = async (req, res) => {
   let data = {
