@@ -1,4 +1,6 @@
 const express = require("express");
+require("dotenv").config();
+
 const cors = require("cors");
 const xss = require("xss-clean");
 const helmet = require("helmet");
@@ -9,6 +11,7 @@ const cookieParser = require("cookie-parser");
 // routes
 const projectRoutes = require("./routes/projectRoutes.js");
 const userRoutes = require("./routes/userRoutes.js");
+const workspaceRoutes = require("./routes/workspaceRoutes");
 
 const app = express();
 
@@ -31,6 +34,7 @@ app.set("view engine", "ejs");
 // routes
 app.use("/api/v1/projects", projectRoutes);
 app.use("/api/v1/users", userRoutes);
+app.use("/api/v1/workspace", workspaceRoutes);
 
 app.get("/api/greetings", (req, res) => {
   res.json({ message: "Hello World!" }).status(200);

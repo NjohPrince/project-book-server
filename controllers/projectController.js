@@ -5,7 +5,10 @@ const Project = db.projects;
 const createProject = async (req, res) => {
   let data = {
     title: req.body.title,
+    owner_id: req.body.id,
+    workspace_id: req.body.w_id,
     description: req.body.description,
+    type: req.body.type,
   };
 
   const project = await Project.create(data);
