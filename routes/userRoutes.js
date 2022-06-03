@@ -6,9 +6,9 @@ const router = require("express").Router();
 
 // create routes
 router.post("/", userController.createUser);
-router.get("/", userController.getTeams);
-router.get("/:id", userController.getTeam);
-router.put("/:id", userController.updateTeam);
-router.delete("/:id", userController.deleteTeam);
+router.get("/", userController.getUsers);
+router.get("/:id", userController.getUser);
+router.put("/:id", userController.updateUser);
+router.delete("/:id", userController.deleteUser);
 
 module.exports = router;

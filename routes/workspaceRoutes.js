@@ -5,10 +5,10 @@ const workspaceController = require("../controllers/workspaceController.js");
 const router = require("express").Router();
 
 // create routes
-router.post("/", workspaceController.creatWorkspace);
-router.get("/", workpaceController.getworkspace);
-router.get("/:id", userController.getTeam);
-router.put("/:id", userController.updateTeam);
-router.delete("/:id", userController.deleteTeam);
+router.post("/", workspaceController.createWorkspace);
+router.get("/", workspaceController.getWorkspaces);
+router.get("/:id", workspaceController.getWorkspace);
+router.put("/:id", workspaceController.updateWorkspace);
+router.delete("/:id", workspaceController.deleteWorkspace);
 
 module.exports = router;
