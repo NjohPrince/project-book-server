@@ -7,7 +7,6 @@ const createInvite = async (req, res) => {
     workspace_id: req.body.workspace_id,
     user_email: req.body.user_email,
   };
-
   try {
     const invite = await Invite.create(data);
     res.status(201).send(invite);

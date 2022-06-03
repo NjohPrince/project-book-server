@@ -1,6 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
     const Invite = sequelize.define("invite", {
-  
       workspace_id: {
         type: DataTypes.INTEGER,
         foreignKey: true,
@@ -16,7 +15,6 @@ module.exports = (sequelize, DataTypes) => {
         notEmpty: true,
         len: [1, 255],
         },
-  
       },
     });
   

@@ -12,7 +12,8 @@ const cookieParser = require("cookie-parser");
 const projectRoutes = require("./routes/projectRoutes.js");
 const userRoutes = require("./routes/userRoutes.js");
 const workspaceRoutes = require("./routes/workspaceRoutes");
-const inviteRoutes = require("./routes/inviteRoutes");
+const inviteRoutes = require("./routes/inviteRouters");
+
 const app = express();
 
 var corsOptions = {
