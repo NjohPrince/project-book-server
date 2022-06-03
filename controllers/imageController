@@ -1,8 +1,8 @@
 const db = require("../models");
 
-const Team = db.teams;
+const Image = db.images;
 
-const createTeam = async (req, res) => {
+const createImage = async (req, res) => {
   let data = {
     name: req.body.name,
     id: req.body.id,
