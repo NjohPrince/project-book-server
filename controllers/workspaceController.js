@@ -27,7 +27,7 @@ const getWorkspace = async (req, res) => {
 
 const getMyWorkspace = async (req, res) => {
   let id = req.params.id;
-  let project = await Workspace.find({ where: { owner_id: id } });
+  let project = await Workspace.findAll({ where: { owner_id: id } });
   res.status(200).send(project);
 };
 

@@ -35,7 +35,7 @@ db.teams = require("./teamModel.js")(sequelize, DataTypes);
 db.module = require("./moduleModel.js")(sequelize, DataTypes); 
 db.image = require("./imageModel.js")(sequelize, DataTypes);
 
-db.sequelize.sync({ force: true }).then(() => {
+db.sequelize.sync({ force: false }).then(() => {
   console.log("Awesome re-sync done!");
 });
 
