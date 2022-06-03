@@ -9,6 +9,7 @@ const cookieParser = require("cookie-parser");
 // routes
 const projectRoutes = require("./routes/projectRoutes.js");
 const userRoutes = require("./routes/userRoutes.js");
+const inviteRoutes = require("./routes/inviteRoutes.js");
 
 const app = express();
 
@@ -31,6 +32,7 @@ app.set("view engine", "ejs");
 // routes
 app.use("/api/v1/projects", projectRoutes);
 app.use("/api/v1/users", userRoutes);
+app.use("/api/v1/users", inviteRoutes);
 
 app.get("/api/greetings", (req, res) => {
   res.json({ message: "Hello World!" }).status(200);
