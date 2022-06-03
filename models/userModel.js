@@ -32,6 +32,9 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
+    access_token: {
+      type: DataTypes.STRING,
+    },
   });
 
   User.beforeCreate(function (user, options) {

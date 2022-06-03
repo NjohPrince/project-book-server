@@ -12,12 +12,12 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    label: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    description: {
-      type: DataTypes.STRING,
+    owner_id: {
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
   });

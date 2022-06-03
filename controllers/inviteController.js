@@ -5,7 +5,7 @@ const Image = db.images;
 const createInvite = async (req, res) => {
   let data = {
     workspace_id: req.body.workspace_id,
-    user_email : req.body.user_email,
+    user_email: req.body.user_email,
   };
 
   try {
@@ -20,5 +20,4 @@ const createInvite = async (req, res) => {
 
 module.exports = {
   createInvite,
-
 };

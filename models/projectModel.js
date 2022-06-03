@@ -13,6 +13,21 @@ module.exports = (sequelize, DataTypes) => {
         notEmpty: true,
       },
     },
+    type: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: true,
+      },
+    },
+    owner_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    workspace_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
     description: {
       type: DataTypes.STRING,
       allowNull: false,
