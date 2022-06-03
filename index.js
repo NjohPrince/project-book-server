@@ -12,7 +12,7 @@ const cookieParser = require("cookie-parser");
 const projectRoutes = require("./routes/projectRoutes.js");
 const userRoutes = require("./routes/userRoutes.js");
 const workspaceRoutes = require("./routes/workspaceRoutes");
-
+const inviteRoutes = require("./routes/inviteRoutes");
 const app = express();
 
 var corsOptions = {
@@ -35,6 +35,7 @@ app.set("view engine", "ejs");
 app.use("/api/v1/projects", projectRoutes);
 app.use("/api/v1/users", userRoutes);
 app.use("/api/v1/workspace", workspaceRoutes);
+app.use("/api/v1/invite", inviteRoutes);
 
 app.get("/api/greetings", (req, res) => {
   res.json({ message: "Hello World!" }).status(200);
