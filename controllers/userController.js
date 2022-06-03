@@ -4,18 +4,15 @@ const User = db.users;
 
 const createUser = async (req, res) => {
   let data = {
-    
     first_name: req.body.name,
     last_name: req.body.name,
-    id: req.body.id,
     contact: req.body.contact,
     email: req.body.email,
     password: req.body.password,
-    
   };
 
-  const project = await User.create(data);
-  res.status(201).send(project);
+  const user = await User.create(data);
+  res.status(201).send(user);
 };
 
 const getUsers = async (req, res) => {
@@ -25,14 +22,14 @@ const getUsers = async (req, res) => {
 
 const getUser = async (req, res) => {
   let id = req.params.id;
-  let project = await User.findOne({ where: { id: id } });
-  res.status(200).send(project);
+  let user = await User.findOne({ where: { id: id } });
+  res.status(200).send(user);
 };
 
 const updateUser = async (req, res) => {
   let id = req.params.id;
-  const project = await User.update(req.body, { where: { id: id } });
-  res.status(200).send(project);
+  const user = await User.update(req.body, { where: { id: id } });
+  res.status(200).send(user);
 };
 
 const deleteUser = async (req, res) => {

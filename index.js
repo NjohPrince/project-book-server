@@ -8,6 +8,7 @@ const cookieParser = require("cookie-parser");
 
 // routes
 const projectRoutes = require("./routes/projectRoutes.js");
+const userRoutes = require("./routes/userRoutes.js");
 
 const app = express();
 
@@ -27,8 +28,9 @@ app.use(express.urlencoded({ extended: true }));
 // Set EJS as templating engine
 app.set("view engine", "ejs");
 
-// projects routes
+// routes
 app.use("/api/v1/projects", projectRoutes);
+app.use("/api/v1/users", userRoutes);
 
 app.get("/api/greetings", (req, res) => {
   res.json({ message: "Hello World!" }).status(200);
