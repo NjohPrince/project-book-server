@@ -11,8 +11,14 @@ const createProject = async (req, res) => {
     type: req.body.type,
   };
 
-  const project = await Project.create(data);
-  res.status(201).send(project);
+  try {
+    const project = await Project.create(data);
+    res.status(201).send(project);
+  } catch (e) {
+    if (e instanceof ValidationError) {
+      return res.status(400).json({ error: e.errors[0].message });
+    }
+  }
 };
 
 const getProjects = async (req, res) => {

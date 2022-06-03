@@ -34,6 +34,7 @@ db.workspaces = require("./workspaceModel.js")(sequelize, DataTypes);
 db.teams = require("./teamModel.js")(sequelize, DataTypes);
 db.module = require("./moduleModel.js")(sequelize, DataTypes); 
 db.image = require("./imageModel.js")(sequelize, DataTypes);
+db.invite = require("./iviteModel.js")(sequelize, DataTypes);
 
 db.sequelize.sync({ force: false }).then(() => {
   console.log("Awesome re-sync done!");
